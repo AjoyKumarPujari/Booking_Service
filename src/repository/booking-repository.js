@@ -1,5 +1,5 @@
 const {StatusCodes} = require('http-status-codes');
-const { Booking } = require('../models/booking');
+const { Booking } = require('../models/index');
 const { AppError, ValidationError } = require('../utils/errors/index');
 
 class BookingRepository {

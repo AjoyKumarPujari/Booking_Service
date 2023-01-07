@@ -8,10 +8,11 @@ class AppError extends Error {
         super();
         this.name = name;
         this.message = message;
-        this.statusCode =statusCode;
         this.explanation=explanation;
+        this.statusCode =statusCode;
+        
 
     }
 }
 
-module.exports=AppError;
+module.exports = AppError;

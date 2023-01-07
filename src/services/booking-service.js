@@ -4,7 +4,7 @@ const  { BookingRepository } = require('../repository/index');
 const { FLIGHT_SERVICE_PATH } = require('../config/serverConfig');
 
  
-const ServiceError = require('../utils/errors/service-error');
+const ServiceError = require('../utils/errors');
 
 class BookingService {
     constructor() {

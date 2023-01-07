@@ -1,4 +1,5 @@
 const {StatusCodes} = require('http-status-codes');
+
 class ServiceError extends Error{
     constructor(
         message= 'Something Went Wrong', 
