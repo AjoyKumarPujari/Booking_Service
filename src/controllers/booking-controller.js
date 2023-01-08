@@ -1,20 +1,21 @@
-const { BookingService } = require('../services/index');
 const { StatusCodes } = require('http-status-codes');
+
+const { BookingService } = require('../services/index');
+
 const bookingService = new BookingService();
 
-const create = async (req, res)=>{
+const create = async (req, res) => {
     try {
         const response = await bookingService.createBooking(req.body);
-        console.log("FROM BOOKING CONTROLLER",response);
+        console.log("FROM BOOKING CONTROLLER", response);
         return res.status(StatusCodes.OK).json({
             message: 'Successfully completed booking',
             success: true,
-            err:{},
+            err: {},
             data: response
-
         })
     } catch (error) {
-        //console.log("FROM BOOKING CONTROLLER",error);
+        console.log("FROM BOOKING CONTROLLER", error);
         return res.status(error.statusCode).json({
             message: error.message,
             success: false,
@@ -23,7 +24,7 @@ const create = async (req, res)=>{
         });
     }
 }
+
 module.exports = {
     create
-
 }
