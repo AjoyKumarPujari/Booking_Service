@@ -7,6 +7,10 @@ const { BookingController} = require('../../controllers/index');
 const bookingController = new BookingController();
 const router = express.Router(); 
 
+
+router.get('/info',(req, res)=>{
+    return res.json({ message: 'Response from routers'});
+})
 // class BookingController{
 //     create = async (req, res) => {
 //         try {
